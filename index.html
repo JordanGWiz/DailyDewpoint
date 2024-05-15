@@ -4,29 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Daily Dewpoint</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Weather Tracker</title>
   </head>
 
   <body>
     <header>
-      <h1>Tell me about it weather boy</h1>
+      <h1>&#127774; Weather Tracker &#127774;</h1>
     </header>
-    <div class="top">
-      <section>
-        <h2><img src="" alt="" /></h2>
-      </section>
-    </div>
-    <div class="left">
-      <section>
-        <h2><img src="" alt="" /></h2>
-      </section>
-    </div>
+    <main>
+      <div class="search-section">
+        <section>
+          <div class="search-module">
+            <form id="city-search-form">
+              <label for="city-search-input"> Search for a city </label>
+              <br />
+              <input
+                id="city-search-input"
+                type="text"
+                placeholder="Enter city name"
+              />
+              <button type="submit" id="city-search-btn">Search</button>
+            </form>
+          </div>
+          <div id="city-search-history"></div>
+        </section>
+      </div>
 
-    <div class="right">
-      <section>
-        <h2><img src="" alt="" /></h2>
-      </section>
-    </div>
+      <div class="weather-display-section">
+        <section id="current-weather-display">
+          <div class="weather-overview-container">
+            <div>
+              <h2>Current Weather Details</h2>
+              <div class="current-weather-info">
+                <div id="current-city-name"></div>
+                <div id="current-date-display"></div>
+                <p>Temperature: <span id="current-temp"></span></p>
+                <p>Wind: <span id="current-wind"></span></p>
+                <p>Humidity: <span id="current-humidity"></span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="five-day-forecast-display">
+          <h3 class="forecast-intro-text">
+            Check out the upcoming 5-day weather forecast!
+          </h3>
+          <div class="forecast-card-container">
+            <article class="day-weather-card">
+              <h4 class="forecast-date">Day 1</h4>
+              <div class="forecast-details">
+                <p>Temperature: <span id="forecast-temp-day-1"></span></p>
+                <p>Wind: <span id="forecast-wind-day-1"></span></p>
+                <p>Humidity: <span id="forecast-humidity-day-1"></span></p>
+              </div>
+            </article>
+
+            <article class="day-weather-card">
+              <h4 class="forecast-date">Day 2</h4>
+              <div class="forecast-details">
+                <p>Temperature: <span id="forecast-temp-day-2"></span></p>
+                <p>Wind: <span id="forecast-wind-day-2"></span></p>
+                <p>Humidity: <span id="forecast-humidity-day-2"></span></p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
